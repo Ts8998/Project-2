@@ -1,0 +1,586 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/****************** END OF RESET *****************/
+
+
+/****************** MAIN CSS ********************/
+
+
+/***************** NAVIGATION POSITIONING ***********/
+header {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 2.5rem 5.625rem 2.5rem;
+}
+
+.user-container {
+	background-color: #709b1d;
+	grid-row: 1/2;
+}
+
+.logo-container {
+	background-color: #fff;
+	grid-row: 2/3;
+}
+
+.nav-container {
+	background-color: #f3f3f3;
+	grid-row: 3/4;
+}
+
+.user-grid,
+.logo-grid,
+.main-nav {
+	max-width: 1600px;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content:center;
+}
+
+/* USER MENU */
+.user-list {
+	width: 40em;
+	height:100%;
+	display: flex;
+	/* justify-content: space-evenly; */
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.user-list > li {
+	display: inline-block;
+	margin-right: 1.5625em;
+	height: 100%;
+	/* width: 18%; */
+}
+
+.user-list a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.login-container a:hover,
+.login-container a:active {
+	background-color: #fff;
+	color: #709b1d;
+}
+
+/* LOGO CONTAINER */
+.login-container {
+	height: 100%;
+	width: 24em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* MAIN NAVIGATION */
+.nav-list {
+	width: 45em;
+	height:100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+
+.nav-list >li {
+	margin-right: 2.5em;
+}
+
+.nav-list a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #709b1d;
+}
+
+
+/****************** MAIN CONTENT ******************/
+
+.main-content {
+	display: grid;
+	grid-template-columns: 1fr 10fr 1fr;
+	grid-gap: 4.7em;
+}
+
+/* Caruosel CSS */
+.hero-carousel {
+	/* width: 100%; */
+	/* height: 30em; */
+	/* margin: 0 auto; */
+	background-color: purple;
+	grid-column: 1/-1;
+}
+
+.hero {
+	height: 38em;
+	max-height: 720px;
+
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.slide-one {
+	display: block;
+	/* position: absolute; */
+	background: url("../images/img2.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slide-two {
+	display: block;
+	/* position: absolute; */
+	background: url("../images/GE75-Raider-banner.PNG");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slide-three {
+	display: block;
+	/* position: absolute; */
+	background: url("../images/WEBBANNER.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.img-banner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transition: all ease-in-out 500ms;
+	-webkit-transition: all ease-in-out 500ms;
+	-moz-transition: all ease-in-out 500ms;
+	-o-transition: all ease-in-out 500ms;
+}
+
+/* CAROUSEL BTN */
+.crsl-btn img {
+	width: 100%;
+	height: 100%;
+}
+
+.crsl-btn {
+	width: 1.9%;
+	height: 7%;
+	background-color: rgba(211, 211, 211, 0.6);
+	position: absolute;
+	top: 47%;
+	z-index: 200;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.crsl-btn:hover {
+	opacity: 1;
+}
+
+.prev-btn {
+	left: 5px;
+}
+
+.next-btn {
+	right: 5px;
+}
+
+/* POLICY NAV */
+.site-policy {
+	display: grid;
+	grid-template-columns: 1fr 10fr 1fr;
+	padding: 0.625em;
+	/* height: 5.625em; */
+	background-color: #709b1d;
+}
+
+.site-policy > ul {
+	grid-column: 2 / 3;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.site-policy li {
+	width: 20%;
+	min-width: 200px;
+	min-height: 70px;
+	/* padding: 1em; */
+	/* height: 4.375em; */
+	border-radius: 8px;
+	/* text-align: center; */
+	background-color: #83b228;
+	/* overflow: hidden; */
+}
+
+/* .site-policy li:after {
+	content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+} */
+
+.site-policy a {
+	/* border: 1em solid black; */
+	width: 100%;
+	height: 100%;
+	min-height: 6em;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-decoration: none;
+	color: #000;
+
+
+}
+
+.site-policy div {
+	/* width: 75%; */
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+/* .site-policy img {
+	display: inline-block;
+	margin: 1.3em 1em 1em 1em;
+	 float: left;
+} */
+
+.site-policy h4 {
+	/* margin-top: 0.75em; */
+	margin-bottom: 0.32em;
+	color: #fff;
+	font-size: 18px;
+}
+
+/* .clear {
+	clear: both;
+} */
+/* .site-policy h4,
+.site-policy p {
+
+} */
+
+/********************** TABS CSS *******************/
+
+.featured-items {
+	width: 100%;
+	/* height: 600px; */
+	/* background-color: purple; */
+	grid-column: 2 / span 1;
+
+}
+
+.tab-nav {
+	background-color: #709b1d;
+	width: 100%;
+	height: 2.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.tab-btn {
+	width: 10em;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+	color: #fff;
+	font-size: 18px;
+}
+
+.tab-btn:hover,
+.active-tab {
+	background-color: #fff;
+	color: #709b1d;
+}
+
+/* Tab Items */
+
+.tab-itm-contain {
+	/* display: grid;
+	grid-gap: 20px;
+	align-items: stretch;
+	justify-content: stretch;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	margin-top: 2.5em; */
+	display: none;
+}
+
+.active-panel {
+	display: grid;
+	grid-gap: 20px;
+	align-items: stretch;
+	justify-content: stretch;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	margin-top: 2.5em;
+}
+
+.product-container {
+	position: relative;
+	justify-content: stretch;
+	align-self: stretch;
+	/* width: 100%;
+	height: 100%; */
+	background-color: #709b1d;
+	border: 5px solid #709b1d;
+}
+
+.product-container > img {
+	width: 100%;
+}
+
+.product-btns {
+	display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.product-btns > button:first-of-type {
+	width: 100%;
+	height: 2.5em;
+	margin-bottom: 15px;
+}
+
+.product-btns > button:nth-of-type(2) {
+	flex-grow: 2;
+	height: 2.5em;
+	margin-bottom: 15px;
+}
+
+.product-btns > button:nth-of-type(n+3) {
+	flex-grow: 1;
+	height: 2.5em;
+	margin-bottom: 15px;
+}
+
+.product-btns a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #709b1d;
+}
+
+.item-add-cart a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.item-add-cart img {
+	margin-right: 16px;
+}
+
+/************************ Advertisement CSS *******************/
+
+.add-container {
+	width: 100%;
+	/* display: flex; */
+	/* height: 600px; */
+	/* background-color: blue; */
+	grid-column: 2 / span 1;
+}
+
+.add > a {
+	/* z-index: 100; */
+	/* justify-self: stretch;
+	align-self: stretch; */
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.add img {
+	/* justify-self: stretch;
+	align-self: stretch; */
+	width: 100%;
+}
+
+/*************** Subscribe Banner ***************/
+
+.subscribe {
+	grid-column: 1 / span 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* text-align: center; */
+	height: 15.625em;
+	background-image: url("../images/Rectangle-7-copy1.png");
+}
+
+.subscribe > h3 {
+	font-size: 80px;
+	color: #fff;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+
+.email {
+	width: 45em;
+	height: 4em;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 3px solid #557c08;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
+.submit {
+	width: 10em;
+	height: 4em;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 3px solid #557c08;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
+/********************** BRAND BANNER ******************/
+
+.brand-container {
+	grid-column: 2 / 3;
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	justify-content: center;
+	align-items: center;
+}
+
+.brand {
+	width: 12em;
+	height: 3em;
+	margin-bottom: 20px;
+	background-color: #709b1d;
+	border: none;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.all-brands {
+	width: 100%;
+
+}
+
+/***************** FOOTER STYLES ***********/
+
+footer {
+	margin-top: 40px;
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-content: space-around;
+	background-color: #f1f1f1;
+}
+
+.footer-nav {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	justify-items: center;
+	align-items: center;
+}
+
+.footer-nav hr {
+	border-top: 1px solid black;
+	width: 100%;
+}
+
+.footer-nav h4 {
+	color: #709b1d;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.footer-nav li {
+	font-size: 25px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.footer-nav a {
+	text-decoration: none;
+	color: #000;
+}
+
+.copy {
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	background-color: #709b1d;
+	height: 50px;
+}
+
+.copy h4 {
+	margin-top: 10px;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 30px;
+}
