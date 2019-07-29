@@ -52,7 +52,7 @@ table {
 /****************** MAIN CSS ********************/
 
 body {
-	font-family: 'Roboto', sans-serif;	
+	font-family: 'Roboto', sans-serif;
 }
 
 /***************** NAVIGATION POSITIONING ***********/
@@ -438,6 +438,7 @@ justify-content: center;
 
 .add-container {
 	width: 100%;
+	position: relative;
 	/* display: flex; */
 	/* height: 600px; */
 	/* background-color: blue; */
@@ -457,6 +458,32 @@ justify-content: center;
 	/* justify-self: stretch;
 	align-self: stretch; */
 	width: 100%;
+	z-index: -100;
+}
+
+.countdown {
+	/* height: 4.4%; */
+	width: 30%;
+	position: absolute;
+	bottom: 6%;
+	right: 5.625%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.countdown > div {
+	width: 25%;
+	height: 1.8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 52px;
+	background-color: #709b1d;
+}
+
+.countdown > div:nth-of-type(n+2) {
+	margin-left: 15px;
 }
 
 /*************** Subscribe Banner ***************/
