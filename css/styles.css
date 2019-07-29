@@ -51,6 +51,9 @@ table {
 
 /****************** MAIN CSS ********************/
 
+body {
+	font-family: 'Roboto', sans-serif;	
+}
 
 /***************** NAVIGATION POSITIONING ***********/
 header {
